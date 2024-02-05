@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="backend.suman.BackendSumanPluginFunctionalTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-02-05T23:35:57" hostname="WILDBEAST666" time="10.533">
+  <properties/>
+  <testcase name="canRunTask()" classname="backend.suman.BackendSumanPluginFunctionalTest" time="10.533"/>
+  <system-out><![CDATA[
+> Task :greeting
+Hello from plugin 'backend.suman.greeting'
+
+BUILD SUCCESSFUL in 9s
+1 actionable task: 1 executed
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

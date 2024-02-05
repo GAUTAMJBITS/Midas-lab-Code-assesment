@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="backend.suman.BackendSumanPluginTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-02-05T23:08:38" hostname="WILDBEAST666" time="1.858">
+  <properties/>
+  <testcase name="pluginRegistersATask()" classname="backend.suman.BackendSumanPluginTest" time="1.858"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
