@@ -1,3 +1,14 @@
+--Suman Kumar 
+<img width="960" alt="Screenshot 2024-02-06 003704" src="https://github.com/GAUTAMJBITS/Midas-lab-Code-assesment/assets/110326087/63f4722c-d34a-4a46-9bb3-5c8ff7195a6c">
+<img width="960" alt="Screenshot 2024-02-06 004022" src="https://github.com/GAUTAMJBITS/Midas-lab-Code-assesment/assets/110326087/0eec5344-55b0-49aa-a11b-3a407fc20c1c">
+<img width="960" alt="Screenshot 2024-02-06 004412" src="https://github.com/GAUTAMJBITS/Midas-lab-Code-assesment/assets/110326087/bc0d5362-ca97-4159-bc43-0ff332efa31b">
+<img width="960" alt="Screenshot 2024-02-06 004501" src="https://github.com/GAUTAMJBITS/Midas-lab-Code-assesment/assets/110326087/846b3240-a5d0-46b4-a18f-e0399f7549f4">
+<img width="960" alt="Screenshot 2024-02-06 050125" src="https://github.com/GAUTAMJBITS/Midas-lab-Code-assesment/assets/110326087/f6db258b-3b5a-4674-9cf8-8919d3abeec8">
+<img width="960" alt="Screenshot 2024-02-06 050252" src="https://github.com/GAUTAMJBITS/Midas-lab-Code-assesment/assets/110326087/3f05d4fd-21a6-40de-928d-657180b49f45">
+<img width="902" alt="Screenshot 2024-02-06 050323" src="https://github.com/GAUTAMJBITS/Midas-lab-Code-assesment/assets/110326087/fd3a595d-e29e-4471-8bd4-4f0ea06ea36f">
+<img width="953" alt="Screenshot 2024-02-06 050442" src="https://github.com/GAUTAMJBITS/Midas-lab-Code-assesment/assets/110326087/cfdd1328-ab33-43ae-9800-641fc166e3eb">
+<img width="960" alt="Screenshot 2024-02-06 050834" src="https://github.com/GAUTAMJBITS/Midas-lab-Code-assesment/assets/110326087/7d4d8185-65d2-4e1b-886e-ffce3882cda8">
+
 # Getting Started
 
 **IMPORTANT: Do not send pull requests to this repository. This is a template repository and is not used for grading. Any pull requests will be closed and ignored.**
@@ -98,9 +109,13 @@ The following guides illustrate how to use some features concretely:
 
 ### Docker Compose support
 
+
+
 This project contains a Docker Compose file named `compose.yaml`.
 In this file, the following services have been defined:
 
 - postgres: [`postgres:latest`](https://hub.docker.com/_/postgres)
 
 Please review the tags of the used images and set them to the same as you're running in production.
+
+
