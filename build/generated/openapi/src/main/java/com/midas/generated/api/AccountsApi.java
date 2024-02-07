@@ -34,7 +34,7 @@ import java.util.Map;
 import java.util.Optional;
 import jakarta.annotation.Generated;
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2024-02-06T05:07:37.543473500+05:30[Asia/Calcutta]")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2024-02-06T03:02:31.251344400+05:30[Asia/Calcutta]")
 @Validated
 @Tag(name = "Accounts", description = "Create and manage user and attach payment providers such as 'stripe'.")
 public interface AccountsApi {

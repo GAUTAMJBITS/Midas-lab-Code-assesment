@@ -20,7 +20,7 @@ import jakarta.annotation.Generated;
 
 @Schema(name = "error", description = "Error response object")
 @JsonTypeName("error")
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2024-02-06T05:07:37.543473500+05:30[Asia/Calcutta]")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2024-02-06T03:02:31.251344400+05:30[Asia/Calcutta]")
 public class ErrorDto {
 
   private String code;

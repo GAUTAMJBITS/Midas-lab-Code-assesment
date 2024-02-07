@@ -1,22 +1,4 @@
---Suman Kumar 
-<img width="960" alt="Screenshot 2024-02-06 003704" src="https://github.com/GAUTAMJBITS/Midas-lab-Code-assesment/assets/110326087/63f4722c-d34a-4a46-9bb3-5c8ff7195a6c">
-<img width="960" alt="Screenshot 2024-02-06 004022" src="https://github.com/GAUTAMJBITS/Midas-lab-Code-assesment/assets/110326087/0eec5344-55b0-49aa-a11b-3a407fc20c1c">
-<img width="960" alt="Screenshot 2024-02-06 004412" src="https://github.com/GAUTAMJBITS/Midas-lab-Code-assesment/assets/110326087/bc0d5362-ca97-4159-bc43-0ff332efa31b">
-<img width="960" alt="Screenshot 2024-02-06 004501" src="https://github.com/GAUTAMJBITS/Midas-lab-Code-assesment/assets/110326087/846b3240-a5d0-46b4-a18f-e0399f7549f4">
-<img width="960" alt="Screenshot 2024-02-06 050125" src="https://github.com/GAUTAMJBITS/Midas-lab-Code-assesment/assets/110326087/f6db258b-3b5a-4674-9cf8-8919d3abeec8">
-<img width="960" alt="Screenshot 2024-02-06 050252" src="https://github.com/GAUTAMJBITS/Midas-lab-Code-assesment/assets/110326087/3f05d4fd-21a6-40de-928d-657180b49f45">
-<img width="902" alt="Screenshot 2024-02-06 050323" src="https://github.com/GAUTAMJBITS/Midas-lab-Code-assesment/assets/110326087/fd3a595d-e29e-4471-8bd4-4f0ea06ea36f">
-<img width="953" alt="Screenshot 2024-02-06 050442" src="https://github.com/GAUTAMJBITS/Midas-lab-Code-assesment/assets/110326087/cfdd1328-ab33-43ae-9800-641fc166e3eb">
-<img width="960" alt="Screenshot 2024-02-06 050834" src="https://github.com/GAUTAMJBITS/Midas-lab-Code-assesment/assets/110326087/7d4d8185-65d2-4e1b-886e-ffce3882cda8">
-
 # Getting Started
-
-**IMPORTANT: Do not send pull requests to this repository. This is a template repository and is not used for grading. Any pull requests will be closed and ignored.**
-
-## Introduction
-
-If you are reading this, you are probably have received this project as a coding challenge. Please read the instructions
-carefully and follow the steps below to get started.
 
 ## Setup
 
@@ -61,10 +43,10 @@ Please check the official documentation for the installation of Java, Temporal, 
 ### Stripe API Keys
 
 Sign up for a Stripe account and get your API keys from the [Stripe Dashboard](https://dashboard.stripe.com/apikeys).
-Then in `application.properties` file add the following line with your secret key.
+Then in `application.properties` file replace "<STRIPE-API-KEY>" the following line with your secret key.
 
 ```properties
-stripe.api-key=sk_test_51J3j
+stripe.api-key=<STRIPE-API-KEY>
 ```
 
 ## Run
@@ -97,25 +79,24 @@ To format the code, use the following command
 ./gradlew spotlessApply
 ```
 
-## Guides
+## Implementation
+Three main classes have been defined for this project to work:
+1. AccountActivityImpl.java
+2. CreateAccountWorkflowImpl.java
+3. TemporalWorker.java
+4. TemporalConfig.java
 
-The following guides illustrate how to use some features concretely:
+### AccountActivityImpl.java
+This is the temporal Activity implementation that overrides the saveAccount and createPaymentAccount methods. The Stripe API request is executed in the createPaymentAccount method of this class. This activity class will be executed in the temporal workflow implementation class.
 
-- [Accessing Data with JPA](https://spring.io/guides/gs/accessing-data-jpa/)
-- [Temporal Quick Start](https://docs.temporal.io/docs/quick-start)
-- [Temporal Java SDK Quick Guide](https://docs.temporal.io/dev-guide/java)
-- [Stripe Quick Start](https://stripe.com/docs/quickstart)
-- [Stripe Java SDK](https://stripe.com/docs/api/java)
+### CreateAccountWorkflowImpl.java
+This is the temporal Workflow implementation that overrides the createAccount method to execute the implemented temporal activity methods. The workflow ensures that the customer account is created and that the customer info is persisted in the database.
 
-### Docker Compose support
+### TemporalWorker.java
+This class defines the temporal worker instance that polls for tasks based on the queue name and registered workflow/activity implementations. The workflow will not progress despite being defined with activities if the workers are not defined.
 
+### TemporalConfig.java
+This is a configuration class that is used to define beans that call the worker methods and register the workflow and activity implementations.
 
-
-This project contains a Docker Compose file named `compose.yaml`.
-In this file, the following services have been defined:
-
-- postgres: [`postgres:latest`](https://hub.docker.com/_/postgres)
-
-Please review the tags of the used images and set them to the same as you're running in production.
-
-
+## Tests
+Not implemented
