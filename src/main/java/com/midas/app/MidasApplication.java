@@ -8,6 +8,5 @@ public class MidasApplication {
 
   public static void main(String[] args) {
     SpringApplication.run(MidasApplication.class, args);
-    System.out.println("Hello");
   }
 }

@@ -22,16 +22,20 @@ import jakarta.annotation.Generated;
  */
 
 @JsonTypeName("account")
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2024-02-06T05:07:37.543473500+05:30[Asia/Calcutta]")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2024-02-06T03:02:31.251344400+05:30[Asia/Calcutta]")
 public class AccountDto {
 
   private UUID id;
+
+  private String providerId;
 
   private String firstName;
 
   private String lastName;
 
   private String email;
+
+  private String providerType;
 
   @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
   private OffsetDateTime createdAt;
@@ -57,6 +61,26 @@ public class AccountDto {
 
   public void setId(UUID id) {
     this.id = id;
+  }
+
+  public AccountDto providerId(String providerId) {
+    this.providerId = providerId;
+    return this;
+  }
+
+  /**
+   * Provider ID
+   * @return providerId
+  */
+  
+  @Schema(name = "providerId", accessMode = Schema.AccessMode.READ_ONLY, example = "cus_PVVb1vCd2DRf1T", description = "Provider ID", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+  @JsonProperty("providerId")
+  public String getProviderId() {
+    return providerId;
+  }
+
+  public void setProviderId(String providerId) {
+    this.providerId = providerId;
   }
 
   public AccountDto firstName(String firstName) {
@@ -119,6 +143,26 @@ public class AccountDto {
     this.email = email;
   }
 
+  public AccountDto providerType(String providerType) {
+    this.providerType = providerType;
+    return this;
+  }
+
+  /**
+   * Provider Type
+   * @return providerType
+  */
+  
+  @Schema(name = "providerType", example = "stripe", description = "Provider Type", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+  @JsonProperty("providerType")
+  public String getProviderType() {
+    return providerType;
+  }
+
+  public void setProviderType(String providerType) {
+    this.providerType = providerType;
+  }
+
   public AccountDto createdAt(OffsetDateTime createdAt) {
     this.createdAt = createdAt;
     return this;
@@ -169,16 +213,18 @@ public class AccountDto {
     }
     AccountDto account = (AccountDto) o;
     return Objects.equals(this.id, account.id) &&
+        Objects.equals(this.providerId, account.providerId) &&
         Objects.equals(this.firstName, account.firstName) &&
         Objects.equals(this.lastName, account.lastName) &&
         Objects.equals(this.email, account.email) &&
+        Objects.equals(this.providerType, account.providerType) &&
         Objects.equals(this.createdAt, account.createdAt) &&
         Objects.equals(this.updatedAt, account.updatedAt);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, firstName, lastName, email, createdAt, updatedAt);
+    return Objects.hash(id, providerId, firstName, lastName, email, providerType, createdAt, updatedAt);
   }
 
   @Override
@@ -186,9 +232,11 @@ public class AccountDto {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountDto {\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    providerId: ").append(toIndentedString(providerId)).append("\n");
     sb.append("    firstName: ").append(toIndentedString(firstName)).append("\n");
     sb.append("    lastName: ").append(toIndentedString(lastName)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    sb.append("    providerType: ").append(toIndentedString(providerType)).append("\n");
     sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");
     sb.append("    updatedAt: ").append(toIndentedString(updatedAt)).append("\n");
     sb.append("}");
